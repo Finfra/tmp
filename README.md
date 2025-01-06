@@ -24,7 +24,7 @@ docker run -it --name u1 --rm -v ${HOME}/df:/df oraclelinux:9
         pip3 install confluent-kafka
         pip3 install kafka-python
         ```
-    - Step 2: s1에 Kafka 서버 설치
+    - Step 2: s1에 Kafka 서버 설치 (x)
         ```
         dnf install -y java-1.8.0-openjdk-devel 
         cd /df
@@ -37,10 +37,11 @@ docker run -it --name u1 --rm -v ${HOME}/df:/df oraclelinux:9
 
     - Step 3: s1의 환경 설정
         - Kafka 브로커 설정 파일: `/opt/kafka/config/server.properties`에서 다음 설정 확인:
+            ```
             `broker.id=1`
-            `zookeeper.connect=s1:2181`
+            `zookeeper.connect=11:2181`
             `log.dirs=/tmp/kafka-logs`
-
+            ```
 * 결과 확인
     - Kafka 클라이언트(i1)와 Kafka 서버(s1)의 설치 및 초기 설정 완료.
     * i1에서 확인
