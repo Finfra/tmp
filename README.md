@@ -10,7 +10,7 @@ docker run -it --name u1 --rm -v ${HOME}/df:/df oraclelinux:9
 * 실습 단계
     - Step 1: i1에 Kafka 클라이언트 설치
         ```bash
-        dnf install -y java-1.8.0-openjdk-devel 
+        dnf install -y java-1.8.0-openjdk-devel wget
         cd /df
         wget https://dlcdn.apache.org/kafka/3.9.0/kafka_2.12-3.9.0.tgz
         tar -xvf kafka_2.12-3.9.0.tgz
