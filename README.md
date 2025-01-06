@@ -62,13 +62,13 @@ docker run -it --name u1 --rm -v ${HOME}/df:/df oraclelinux:9
         ```bash
         # Zookeeper 실행
         tmux 
-            /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
+            zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
             <ctl+b,d>
         ```
     - Step 2: s1에서 Kafka 브로커 실행
         ```bash
         tmux 
-            /opt/kafka/kafka-server-start.sh /opt/kafka/config/server.properties
+            kafka-server-start.sh /opt/kafka/config/server.properties
             <ctl+b,d>
         ```
     - Step 3: i1에서 Kafka 클라이언트 실행
