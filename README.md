@@ -1,8 +1,10 @@
 # Container준비
+```
 docker run -it --name u1 --rm -v ${HOME}/df:/df oraclelinux:9
   cp lotte.net.crt /etc/pki/ca-trust/source/anchors/lotte.net.crt
   update-ca-trust enable
   update-ca-trust extract
+```
 # 1.3. 실습: Kafka 환경 설정 및 기본 사용법
 ## 실습1: Kafka 설치 및 기본 환경 설정 방법
 * 실습 목표
